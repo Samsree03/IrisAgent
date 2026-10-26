@@ -1,0 +1,65 @@
+{
+  "architecture": "aarch64",
+  "opencv_version": "4.12.0",
+  "opencv_module": "/opt/cool/python_3.12/site-packages/cv2/python-3.12/cv2.cpython-312-aarch64-linux-gnu.so",
+  "image_shape": [
+    480,
+    640,
+    3
+  ],
+  "raw_yolo_output_shape": [
+    1,
+    7,
+    8400
+  ],
+  "warmup_iterations": 10,
+  "measured_iterations": 100,
+  "confidence_threshold": 0.15,
+  "nms_threshold": 0.4,
+  "preprocessing": {
+    "mean_ms": 1.8867,
+    "median_ms": 1.86,
+    "p95_ms": 1.9357,
+    "min_ms": 1.7719,
+    "max_ms": 3.3406,
+    "throughput_ops_s": 530.02
+  },
+  "postprocessing_including_nms": {
+    "mean_ms": 0.258,
+    "median_ms": 0.2545,
+    "p95_ms": 0.2717,
+    "min_ms": 0.2492,
+    "max_ms": 0.2763,
+    "throughput_ops_s": 3876.36
+  },
+  "detection_count": 2,
+  "detections": [
+    {
+      "box": [
+        242,
+        292,
+        59,
+        41
+      ],
+      "class_id": 2,
+      "confidence": 0.3742288
+    },
+    {
+      "box": [
+        337,
+        285,
+        62,
+        39
+      ],
+      "class_id": 2,
+      "confidence": 0.3242152
+    }
+  ],
+  "preprocessing_blob_shape": [
+    1,
+    3,
+    640,
+    640
+  ],
+  "preprocessing_blob_dtype": "float32"
+}

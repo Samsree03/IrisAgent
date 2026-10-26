@@ -1,0 +1,67 @@
+{
+  "architecture": "aarch64",
+  "opencv_version": "4.12.0",
+  "opencv_module": "/tmp/irisagent-standard-412/lib/python3.12/site-packages/cv2/__init__.py",
+  "image_shape": [
+    480,
+    640,
+    3
+  ],
+  "raw_yolo_output_shape": [
+    1,
+    7,
+    8400
+  ],
+  "warmup_iterations": 10,
+  "measured_iterations": 100,
+  "confidence_threshold": 0.15,
+  "nms_threshold": 0.4,
+  "preprocessing": {
+    "mean_ms": 2.9505,
+    "median_ms": 2.7625,
+    "p95_ms": 4.0783,
+    "min_ms": 2.0493,
+    "max_ms": 4.1235,
+    "throughput_ops_s": 338.93
+  },
+  "postprocessing_including_nms": {
+    "mean_ms": 0.2022,
+    "median_ms": 0.1924,
+    "p95_ms": 0.2326,
+    "min_ms": 0.1897,
+    "max_ms": 0.3462,
+    "throughput_ops_s": 4945.2
+  },
+  "detection_count": 2,
+  "detections": [
+    {
+      "box": [
+        242,
+        292,
+        59,
+        41
+      ],
+      "class_id": 2,
+      "confidence": 0.3742288
+    },
+    {
+      "box": [
+        337,
+        285,
+        62,
+        39
+      ],
+      "class_id": 2,
+      "confidence": 0.3242152
+    }
+  ],
+  "preprocessing_blob_shape": [
+    1,
+    3,
+    640,
+    640
+  ],
+  "preprocessing_blob_dtype": "float32"
+}
+
+Saved benchmark results: /home/ubuntu/standard_repeat_5.json

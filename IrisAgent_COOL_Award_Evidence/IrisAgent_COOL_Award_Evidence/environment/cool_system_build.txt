@@ -1,0 +1,151 @@
+=== System ===
+Linux ip-172-31-47-7 6.17.0-1019-aws #19~24.04.1-Ubuntu SMP Tue Jun 23 18:34:05 UTC 2026 aarch64 aarch64 aarch64 GNU/Linux
+Architecture:                            aarch64
+CPU op-mode(s):                          32-bit, 64-bit
+Byte Order:                              Little Endian
+CPU(s):                                  2
+On-line CPU(s) list:                     0,1
+Vendor ID:                               ARM
+Model name:                              Neoverse-V1
+Model:                                   1
+Thread(s) per core:                      1
+Core(s) per socket:                      2
+Socket(s):                               1
+Stepping:                                r1p1
+BogoMIPS:                                2100.00
+Flags:                                   fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm jscvt fcma lrcpc dcpop sha3 sm3 sm4 asimddp sha512 sve asimdfhm dit uscat ilrcpc flagm paca pacg dcpodp svei8mm svebf16 i8mm bf16 dgh rng
+L1d cache:                               128 KiB (2 instances)
+L1i cache:                               128 KiB (2 instances)
+L2 cache:                                2 MiB (2 instances)
+L3 cache:                                32 MiB (1 instance)
+NUMA node(s):                            1
+NUMA node0 CPU(s):                       0,1
+Vulnerability Gather data sampling:      Not affected
+Vulnerability Ghostwrite:                Not affected
+Vulnerability Indirect target selection: Not affected
+Vulnerability Itlb multihit:             Not affected
+Vulnerability L1tf:                      Not affected
+Vulnerability Mds:                       Not affected
+Vulnerability Meltdown:                  Not affected
+Vulnerability Mmio stale data:           Not affected
+Vulnerability Old microcode:             Not affected
+Vulnerability Reg file data sampling:    Not affected
+Vulnerability Retbleed:                  Not affected
+Vulnerability Spec rstack overflow:      Not affected
+Vulnerability Spec store bypass:         Mitigation; Speculative Store Bypass disabled via prctl
+Vulnerability Spectre v1:                Mitigation; __user pointer sanitization
+Vulnerability Spectre v2:                Mitigation; CSV2, BHB
+Vulnerability Srbds:                     Not affected
+Vulnerability Tsa:                       Not affected
+Vulnerability Tsx async abort:           Not affected
+Vulnerability Vmscape:                   Not affected
+
+=== COOL OpenCV build ===
+
+General configuration for OpenCV 4.12.0 =====================================
+  Version control:               4.12.0-dirty
+
+  Platform:
+    Timestamp:                   2026-01-28T09:24:37Z
+    Host:                        Linux 6.14.0-1018-aws aarch64
+    CMake:                       3.28.3
+    CMake generator:             Ninja
+    CMake build tool:            /usr/bin/ninja
+    Configuration:               Release
+    Algorithm Hint:              ALGO_HINT_ACCURATE
+
+  CPU/HW features:
+    Baseline:                    NEON FP16 NEON_DOTPROD NEON_FP16 NEON_BF16
+      requested:                 DETECT
+    Dispatched code generation:
+      requested:                 NEON_FP16 NEON_BF16 NEON_DOTPROD
+
+  C/C++:
+    Built as dynamic libs?:      YES
+    C++ standard:                11
+    C++ Compiler:                /usr/bin/c++  (ver 13.3.0)
+    C++ flags (Release):         -O3 -mcpu=neoverse-v1 -fvisibility=hidden   -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections -flto=auto  -O3 -DNDEBUG  -DNDEBUG
+    C++ flags (Debug):           -O3 -mcpu=neoverse-v1 -fvisibility=hidden   -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections -flto=auto  -g  -DDEBUG -D_DEBUG
+    C Compiler:                  /usr/bin/cc
+    C flags (Release):           -O3 -mcpu=neoverse-v1 -fvisibility=hidden   -fsigned-char -W -Wall -Wreturn-type -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections -flto=auto  -O3 -DNDEBUG  -DNDEBUG
+    C flags (Debug):             -O3 -mcpu=neoverse-v1 -fvisibility=hidden   -fsigned-char -W -Wall -Wreturn-type -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections -flto=auto  -g  -DDEBUG -D_DEBUG
+    Linker flags (Release):      -Wl,-rpath,/opt/arm/armpl_25.07.1_gcc/lib -Wl,-rpath,/opt/ffmpeg_5.1/lib  -Wl,--gc-sections -Wl,--as-needed -Wl,--no-undefined  
+    Linker flags (Debug):        -Wl,-rpath,/opt/arm/armpl_25.07.1_gcc/lib -Wl,-rpath,/opt/ffmpeg_5.1/lib  -Wl,--gc-sections -Wl,--as-needed -Wl,--no-undefined  
+    ccache:                      NO
+    Precompiled headers:         NO
+    Extra dependencies:          dl m pthread rt
+    3rdparty dependencies:
+
+  OpenCV modules:
+    To be built:                 calib3d core dnn features2d flann gapi highgui imgcodecs imgproc ml objdetect photo python3 stitching ts video videoio
+    Disabled:                    world
+    Disabled by dependency:      -
+    Unavailable:                 java python2
+    Applications:                tests perf_tests apps
+    Documentation:               NO
+    Non-free algorithms:         NO
+
+  GUI:                           GTK3
+    GTK+:                        YES (ver 3.24.41)
+    VTK support:                 NO
+
+  Media I/O: 
+    ZLib:                        /usr/lib/aarch64-linux-gnu/libz.so (ver 1.3)
+    JPEG:                        /usr/lib/aarch64-linux-gnu/libjpeg.so (ver 80)
+    WEBP:                        /usr/lib/aarch64-linux-gnu/libwebp.so (ver decoder: 0x0209, encoder: 0x020f, demux: 0x0107)
+    AVIF:                        NO
+    PNG:                         /usr/lib/aarch64-linux-gnu/libpng.so (ver 1.6.43)
+    TIFF:                        /usr/lib/aarch64-linux-gnu/libtiff.so (ver 42 / 4.5.1)
+    JPEG 2000:                   build (ver 2.5.3)
+    OpenEXR:                     build (ver 2.3.0)
+    GIF:                         YES
+    HDR:                         YES
+    SUNRASTER:                   YES
+    PXM:                         YES
+    PFM:                         YES
+
+  Video I/O:
+    FFMPEG:                      YES (find_package)
+      avcodec:                   YES (59.37.100)
+      avformat:                  YES (59.27.100)
+      avutil:                    YES (57.28.100)
+      swscale:                   YES (6.7.100)
+      avresample:                NO
+    GStreamer:                   NO
+    v4l/v4l2:                    YES (linux/videodev2.h)
+
+  Parallel framework:            TBB (ver 2022.1 interface 12150)
+
+  Trace:                         YES (with Intel ITT(3.25.4))
+
+  Other third-party libraries:
+    Lapack:                      YES (/opt/arm/armpl_25.07.1_gcc/lib/libarmpl_lp64.so /opt/arm/armpl_25.07.1_gcc/lib/libamath.so /opt/arm/armpl_25.07.1_gcc/lib/libastring.so -lgfortran -lm)
+    Eigen:                       NO
+    Custom HAL:                  YES (carotene (ver 0.0.1) KleidiCV (ver 0.5.0))
+    Protobuf:                    build (3.19.1)
+    Flatbuffers:                 builtin/3rdparty (23.5.9)
+
+  OpenCL:                        YES (no extra features)
+    Include path:                /home/ubuntu/opencv_g3final/opencv/3rdparty/include/opencl/1.2
+    Link libraries:              Dynamic load
+
+  Python 3:
+    Interpreter:                 /home/ubuntu/opencv_g3final/build_artifacts_secure/venv_3.12/bin/python3.12 (ver 3.12.3)
+    Libraries:                   /usr/lib/aarch64-linux-gnu/libpython3.12.so (ver 3.12.3)
+    Limited API:                 NO
+    numpy:                       /home/ubuntu/opencv_g3final/build_artifacts_secure/venv_3.12/lib/python3.12/site-packages/numpy/core/include (ver 1.26.4)
+    install path:                /home/ubuntu/opencv_g3final/build_artifacts_secure/venv_3.12/lib/python3.12/site-packages/cv2/python-3.12
+
+  Python (for build):            /home/ubuntu/opencv_g3final/build_artifacts_secure/venv_3.12/bin/python3.12
+
+  Java:                          
+    ant:                         NO
+    Java:                        NO
+    JNI:                         NO
+    Java wrappers:               NO
+    Java tests:                  NO
+
+  Install to:                    /home/ubuntu/opencv_g3final/build_artifacts_secure/install_3.12
+-----------------------------------------------------------------
+
+
