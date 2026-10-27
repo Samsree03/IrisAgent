@@ -88,12 +88,6 @@ export DYNAMO_TABLE_NAME="IrisAgentLogs"
 export GEMINI_API_KEY="<your-google-api-key>"
 ```
 
-> **Security tips**
-> - **Don't commit keys to Git.** Keep them out of the repository.
-> - **Prefer an IAM role over stored keys.** Attach an IAM role to the EC2 instance that allows publishing to SNS, IoT Core, and writing to DynamoDB, so you don't need AWS access keys on the server.
-> - **Use a secrets file or a `.env` file** that is listed in `.gitignore` instead of adding exports to `~/.bashrc`, which is easy to leak.
-> - Keep `GEMINI_API_KEY` in the same protected location.
-
 ### Step 7: Run the server
 
 ```bash
@@ -175,5 +169,3 @@ What you should see:
 | AWS errors (SNS, DynamoDB, IoT) | Check the IAM role on the instance and the region (`ap-south-1`). |
 | Port 5000 blocked | Check the security group rule and that the server is listening on `0.0.0.0:5000`. |
 | Instance costs | Stop the instance when not in use: `aws ec2 stop-instances --instance-ids <id> --region ap-south-1` |
-
-> **Remember:** Stop the EC2 instance after the demo. This reduces cost and attack surface, as described in the project report.
