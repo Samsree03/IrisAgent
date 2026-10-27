@@ -16,7 +16,7 @@ from collections import deque
 import cv2
 import numpy as np
 import requests
-SERVER_BASE = os.getenv("IRIS_SERVER", "http://13.206.222.255:5000")
+SERVER_BASE = os.getenv("IRIS_SERVER", "http://13.206.222.255:5000") #IP Changes everytime make sure to replace
 INWARD_CAM_INDEX = int(os.getenv("INWARD_CAM", "0"))
 OUTWARD_CAM_INDEX = int(os.getenv("OUTWARD_CAM", "1"))
 SEND_WIDTH = 640
