@@ -1,9 +1,5 @@
 # IrisAgent: Low-Cost, Cloud-Accelerated Assistive Agent
 
-**OpenCV AI Competition 2026, Final Submission**
-**Team:** IrisAgent (Individual participation)
-**Author:** Samsthidhaa Sree S
-
 IrisAgent turns a standard dual-camera setup into a hands-free assistive system. Users with severe motor disabilities (ALS, spinal cord injuries, locked-in syndrome, stroke, neuromuscular degeneration) can steer a mobility device, communicate through text-to-speech, and interact with their room using only their eyes, blinks, and mouth movements.
 
 ---
@@ -173,21 +169,9 @@ All benchmarks ran on an AWS Graviton3 `c7g.large` instance (2 vCPUs, 4 GiB RAM,
 - **Classes evaluated:** Eye state (open and closed), mouth status (`Mouth_open`), and face tracking.
 - **Key metric:** mAP50 of **85%**.
 
-![Fig 4.0: YOLOv11n training results](IrisAgent_COOL_Award_Evidence/images/fig4_yolo11_training_results.png)
-
-*Fig 4.0: YOLOv11n training results.*
-
-![Fig 5.0: Confusion matrix of YOLOv11 model](IrisAgent_COOL_Award_Evidence/images/fig5_yolo11_confusion_matrix.png)
-
-*Fig 5.0: Confusion matrix of the YOLOv11 model.*
-
 ### 9.2 Gaze Classification Model (Inception-ResNetV2)
 - **Classes:** Straight, Left, Right, Closed.
 - **Key metric:** Overall accuracy of **90%**, which supports stable real-time wheelchair control and 5-second dwell selection.
-
-![Fig 6.0: Confusion matrix of the Inception-ResNetV2 gaze model](IrisAgent_COOL_Award_Evidence/images/fig6_gaze_confusion_matrix.png)
-
-*Fig 6.0: Confusion matrix of the Inception-ResNetV2 gaze model.*
 
 ## 10. Repository Structure
 
@@ -204,8 +188,6 @@ IrisAgent/
     ├── benchmarks/                        # Benchmark scripts and raw results
     └── report/                            # Final competition report
 ```
-
-> Update the folder names above to match your actual repository layout.
 
 ## 11. Setup and Running
 
@@ -224,16 +206,16 @@ cd IrisAgent
 
 # 2. Start the cloud server (on the EC2 Graviton3 instance)
 cd server
-pip install -r requirements.txt
+pip install -r server_requirements.txt
 python <server_entry_file>.py
 
 # 3. Start the edge client (on the laptop or edge device)
 cd ../client
-pip install -r requirements.txt
+pip install -r client_requirements.txt
 python <client_entry_file>.py
 ```
 
-Replace `<server_entry_file>` and `<client_entry_file>` with your actual file names.
+Replace `<server_entry_file>` and `<client_entry_file>` with your actual file names if changed.
 
 ### Configuration
 - Set the cloud server URL in the client config so it points to your EC2 instance.
@@ -277,10 +259,6 @@ aws ec2 stop-instances --instance-ids <your-instance-id> --region ap-south-1
 - **Encryption in transit:** Microservice communication within AWS is protected with TLS 1.3, and edge-to-cloud transport uses encrypted HTTPS.
 
 ---
-
-## License
-
-<!-- Add your license here, e.g. MIT -->
 
 ## Acknowledgements
 
